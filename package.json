@@ -1,0 +1,47 @@
+{
+  "name": "Tetrjs",
+  "version": "0.0.1",
+  "description": "A Tetris game with Typescript",
+  "main": "build/app/app.js",
+  "scripts": {
+    "postinstall": "cd src && typings install",
+    "prebuild": "rimraf build",
+    "build": "tsc -p src/ || true",
+    "test": "mocha build/test --require source-map-support/register || true",
+    "clean": "rimraf build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thierrycastel/tetrjs.git"
+  },
+  "keywords": [
+    "vscode",
+    "typescript",
+    "example",
+    "project",
+    "debug",
+    "intellisense",
+    "compile",
+    "transpile",
+    "tetris"
+  ],
+  "author": "Thierry Castel https://github.com/thierrycastel/",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thierrycastel/"
+  },
+  "homepage": "https://github.com/thierrycastel/tetrjs#readme",
+  "private": true,
+  "devDependencies": {
+    "mocha": "^3.5.0",
+    "rimraf": "^2.5.2",
+    "sinon": "^1.17.4",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  },
+  "dependencies": {
+    "browserify": "^14.4.0",
+    "commonjs": "0.0.1",
+    "source-map-support": "^0.4.0"
+  }
+}
